@@ -12,10 +12,10 @@ df['Order Date'] = pd.to_datetime(df['Order Date'])  # Convert to datetime
 df['Year'] = df['Order Date'].dt.year
 df['Month'] = df['Order Date'].dt.month
 
-# Handle missing values
+# Handling missing values
 df.dropna(inplace=True)
 
-# Add calculated fields if needed (e.g., Revenue)
+# Revenue
 df['Revenue'] = df['Units Sold'] * df['Unit Price']
 
 # Monthly Sales Trend
